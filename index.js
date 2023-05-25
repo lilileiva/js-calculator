@@ -86,8 +86,7 @@ const cleanScreen = () => {
 let number_keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 let symbol_keys = ["+", "-", "*", "/", "(", ")", "."]
 
-const onKeyPress = (e) => {
-    valid_keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+const onKeyPress = (e) => {    
     if (e.key in number_keys) operationValue == "0" ? operationValue = e.key : operationValue += e.key
     if (e.key == "+" || e.key == "-" || e.key == "*" || e.key == "/" || e.key== ".") operationValue += e.key
     if (e.key == "(" && openParenthesis == false) {
@@ -108,17 +107,17 @@ const onKeyPress = (e) => {
 const clickedButton = (e) => {
     if (e.target.textContent in number_keys) operationValue == "0" ? operationValue = e.target.textContent : operationValue += e.target.textContent    
     if (e.target.textContent == "+" || e.target.textContent == "-" || e.target.textContent == "*" || e.target.textContent == "/" || e.target.textContent== ".") operationValue += e.target.textContent
-    if (e.target.id == "(" && openParenthesis == false) {
+    if (e.target.textContent == "(" && openParenthesis == false) {
         if (operationValue.slice(-1) != ("+" && "-" && "*" && "/" && ",")) operationValue += "*"
-        operationValue += e.target.id
+        operationValue += e.target.textContent
         openParenthesis = true
     }
-    if (e.target.id == ")" && (operationValue.slice(-1) != ("+" && "-" && "*" && "/" && ",")) && openParenthesis == true) {
-        operationValue += e.target.id
+    if (e.target.textContent == ")" && (operationValue.slice(-1) != ("+" && "-" && "*" && "/" && ",")) && openParenthesis == true) {
+        operationValue += e.target.textContent
         openParenthesis = false
     }
-    if (e.target.id == "Enter" || e.target.id == "=") getResult()
-    if (e.target.id == "c" || e.target.id == "C") cleanScreen()
+    if (e.target.textContent == "Enter" || e.target.textContent == "=") getResult()
+    if (e.target.textContent == "c" || e.target.textContent == "C") cleanScreen()
     operation.textContent = operationValue
 }
 
