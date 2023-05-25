@@ -25,6 +25,6 @@
 ### - Todo se debe agregar desde JavaScript (el archivo HTML solo debería tener un div con el id "app").
 
 # Imágenes:
-![image](https://github.com/lilileiva/js-calculator/assets/94813118/23dfcaf2-980e-4b0f-b91e-d55ac6e6c050)
-![image](https://github.com/lilileiva/js-calculator/assets/94813118/4d4a0c48-0696-48ed-b040-c9d2ce0b2a10)
+![image](https://github.com/lilileiva/js-calculator/assets/94813118/5ada72a4-0739-4076-8c1e-8656122cbb49)
+![image](https://github.com/lilileiva/js-calculator/assets/94813118/f34338af-fbd6-452a-b74d-9d8990f380df)
 
